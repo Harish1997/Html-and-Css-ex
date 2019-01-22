@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head><center><h1>Assignment - HTML & CSS </h1>
+<h5>By Harish Anantharaman</h5>
+</center>
+	<hr>
+<style>
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<h1>Different character sets in HTML</h1>
+<p>
+	The different character sets used in html are ASCII,ANSI,8859 and UTF-8.
+	<br>
+	ASCII was the first character encoding standard (also called character set). ASCII defined 128 different alphanumeric characters that could be used on the internet: numbers (0-9), English letters (A-Z), and some special characters like ! $ + - ( ) @ < > .
+
+ANSI (Windows-1252) was the original Windows character set, with support for 256 different character codes.
+
+ISO-8859-1 was the default character set for HTML 4. This character set also supported 256 different character codes.
+
+Because ANSI and ISO-8859-1 were so limited, HTML 4 also supported UTF-8.
+</p>
+<h1>Difference between self closing tags and tags with explicit closing tag</h1>
+<p>
+	The concept of self closing tags was mainly inteneded to support void tags such as img and link that don't contain any body data.Self closing tags don't require a closing tags in specific in HTML5 and the slash caharcter is considered obsolete.
+</p>
+<h1>Difference between Html and Html5</h1>
+<p>Html5 is an extension of the typical Html language. It provides all the features covered by html but removes some of the strictness associated with the original html and provides high level audio and video support.
+<br>
+<br>
+Html5 provides support for SVG, Canvas and vector graphics
+HTML5 uses web SQL databases, application cache for temporary storing data, meanwhile, in HTML, only browser cache could be utilized for this purpose.
+Another difference between HTML and HTML5 worth mentioning is that the former doesn’t allow JavaScript to run within the web browser (it instead runs in the browser interface thread) whereas the latter provides full support for JavaScript to run in the background (This is possible courtesy to the JS web worker API of HTML5).
+HTML5 is not based on SGML, and that allows it to have improved parsing rules which provide enhanced compatibility.
+In HTML5, inline MathML and SVG can be used in text whereas this wasn’t possible in HTML.
+Some of the deprecated elements that have now been dropped completely are: isindex, noframes, acronym, applet, basefont, dir, font, frame, frameset, big, center, strike, tt.
+HTML5 supports new kinds of form controls, for example: dates and times, email, number, range, tel, url, search etc.
+There are many new elements introduced in HTML. Some of the most important ones are: summary, time, aside, audio, command, data, datalist, details, embed, wbr, figcaption, figure, footer, header, article, hgroup, bdi, canvas, keygen, mark, meter, nav, output, progress, rp, rt, ruby, section, source, track, video.
+</p>
+<h1>Table with single border</h1>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Harish</td>
+    <td>Ananth</td>
+  </tr>
+  <tr>
+    <td>Santhosh</td>
+    <td>Kumar</td>
+  </tr>
+</table>
+<h1>Navigation bar in html</h1>
+<ul>
+  <li class="active"><a href="one.html">Home</a></li>
+  <li><a href="two.html">News</a></li>
+  <li><a href="three.html">Contact</a></li>
+  <li><a href="four.html">About</a></li>
+</ul>
+<h1>Restrict other file types in image selection</h1>
+<p>
+	In the input tag we specify "accept = file format1,file format2.."
+	<br>
+	<br>
+	<input type="file" accept=".png,.jpg" />
+</p>
+<h1>Why we need multipart in forms that accept a file</h1>
+<p>
+	HTML forms provide three methods of encoding.
+<ol type="1">
+<li>application</li><br>
+<li>multipart</li><br>
+<li>text/plain</li><br><br>
+</ol>
+The content "multipart/form-data" follows the rules of all multipart MIME data streams as outlined in [RFC2045]. The definition of "multipart/form-data" is available at the [IANA] registry.
+
+A "multipart/form-data" message contains a series of parts, each representing a successful control. The parts are sent to the processing agent in the same order the corresponding controls appear in the document stream. Part boundaries should not occur in any of the data; how this is done lies outside the scope of this specification.
+
+As with all multipart MIME types, each part has an optional "Content-Type" header that defaults to "text/plain". User agents should supply the "Content-Type" header, accompanied by a "charset" parameter.
+</p>
+<h1>Specifying input range in html</h1>
+<input type="range" list="tickmarks">
+
+<datalist id="tickmarks">
+  <option value="0" label="0%">
+  <option value="10">
+  <option value="20">
+  <option value="30">
+  <option value="40">
+  <option value="50" label="50%">
+  <option value="60">
+  <option value="70">
+  <option value="80">
+  <option value="90">
+  <option value="100" label="100%">
+</datalist>
+<h1>Include a Youtube video in html</h1>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+<h1>Access user location in HTML5</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Get location</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<h1>Http request and response format</h1>
+<h2>
+   Http request to get hello.html from server
+</h2>
+<p>GET /hello.htm HTTP/1.1<br>
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)<br>
+Host: www.tutorialspoint.com<br>
+Accept-Language: en-us<br>
+Accept-Encoding: gzip, deflate<br>
+Connection: Keep-Alive<br>
+	</p>
+	<h2>Http response</h2>
+	<p>HTTP/1.1 200 OK<br>
+Date: Mon, 27 Jul 2009 12:28:53 GMT<br>
+Server: Apache/2.2.14 (Win32)<br>
+Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT<br>
+Content-Length: 88<br>
+Content-Type: text/html<br>
+Connection: Closed</p>
+<h1>Differences between http and https</h1>
+<ol>
+<li>In HTTP, URL begins with “http://” whereas URL starts with “https://”</li><br>
+<li>HTTP uses port number 80 for communication and HTTPS uses 443</li><br>
+<li>HTTP is considered to be unsecure and HTTPS is secure</li><br>
+<li>HTTP Works at Application Layer and HTTPS works at Transport Layer</li><br>
+<li>In HTTP, Encryption is absent and Encryption is present in HTTPS as discussed above</li><br>
+<li>HTTP does not require any certificates and HTTPS needs SSL Certificates</li>
+	</ol>
+	<h1>AJAX call</h1>
+	<ol>
+<li>An event occurs in a web page (the page is loaded, a button is clicked)</li><br>
+<li>An XMLHttpRequest object is created by JavaScript</li><br>
+<li>The XMLHttpRequest object sends a request to a web server</li><br>
+<li>The server processes the request</li><br>
+<li>The server sends a response back to the web page</li><br>
+<li>The response is read by JavaScript</li><br>
+<li>Proper action (like page update) is performed by JavaScript</li><br>
+</ol>
+<h1>How to tell if a browser supports Javascript or not</h1>
+<p>
+	To detect if JavaScript is disabled in a web browser, use the &lt;noscript&gt; tag. The HTML &lt;noscript&gt; tag is used to handle the browsers, which do recognize &lt;script&gt; tag but do not support scripting. This tag is used to display an alternate text message.
+</p>
+<h1>Uses of strong and em tags</h1>
+<em>Emphasized text</em><br>
+<strong>Strong text</strong><br>
+<h1>Different coloring standards</h1>
+<p>HTML colors are specified using predefined color names or by RGB, HEX, HSL, RGBA, HSLA values.
+</p>
+<h3>RGB</h3>
+<p>Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.<br>
+
+For example, rgb(255, 0, 0) is displayed as red, because red is set to its highest value (255) and the others are set to 0.<br>
+
+To display the color black, all color parameters must be set to 0, like this: rgb(0, 0, 0).<br>
+
+To display the color white, all color parameters must be set to 255, like this: rgb(255, 255, 255).</p>
+<h3>HEX</h3>
+<p>In HTML, a color can be specified using a hexadecimal value in the form:
+
+#rrggbb<br>
+
+Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).<br>
+
+For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).</p>
+<h3>HSL</h3>
+<p>In HTML, a color can be specified using hue, saturation, and lightness (HSL) in the form:<br>
+
+hsl(hue, saturation, lightness)<br>
+
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.<br>
+
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.<br>
+
+Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white</p>
+<h3>RGBA</h3>
+<p>RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity for a color.<br>
+
+An RGBA color value is specified with:<br>
+
+rgba(red, green, blue, alpha)<br>
+
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+
+</p>
+<h3>HSLA</h3>
+<p>
+HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a color.<br>
+
+An HSLA color value is specified with:<br>
+
+hsla(hue, saturation, lightness, alpha)<br>
+
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):</p>
+<h1>Various semantic references in html</h1>
+<table>
+<tr>
+<th style="width:20%">Tag</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>&lt;article&gt;</td>
+<td>Defines an article</td>
+</tr>
+<tr>
+<td>&lt;aside&gt;</td>
+<td>Defines content aside from the page content</td>
+</tr>
+<tr>
+<td>&lt;details&gt;</td>
+<td>Defines additional details that the user can view or hide</td>
+</tr>
+<tr>
+<td>&lt;figcaption&gt;</td>
+<td>Defines a caption for a &lt;figure&gt; element</td>
+</tr>
+<tr>
+<td>&lt;figure&gt;</td>
+<td>Specifies self-contained content, like illustrations, diagrams, photos, code 
+listings, etc.</td>
+</tr>
+<tr>
+<td>&lt;footer&gt;</td>
+<td>Defines a footer for a document or section</td>
+</tr>
+<tr>
+<td>&lt;header&gt;</td>
+<td>Specifies a header for a document or section</td>
+</tr>
+<tr>
+<td>&lt;main&gt;</td>
+<td>Specifies the main content of a document</td>
+</tr>
+<tr>
+<td>&lt;mark&gt;</td>
+<td>Defines marked/highlighted text</td>
+</tr>
+<tr>
+<td>&lt;nav&gt;</td>
+<td>Defines navigation links</td>
+</tr>
+<tr>
+<td>&lt;section&gt;</td>
+<td>Defines a section in a document</td>
+</tr>
+<tr>
+<td>&lt;summary&gt;</td>
+<td>Defines a visible heading for a &lt;details&gt; element</td>
+</tr>
+<tr>
+<td>&lt;time&gt;</td>
+<td>Defines a date/time</td>
+</tr>
+</table>
+<h1>Open a pdf document in the browser</h1>
+<p>We use the embed src tag to open a pdf in the browser</p>
+<embed src="http://www.pdf995.com/samples/pdf.pdf" width="800px" height="2100px" />
+<h1>How to determine if a particular browser supports html5 or not</h1>
+<p>We can use something like Modernizr to do feature detection on the client-side. Modernizr is an open source, MIT-licensed JavaScript library that detects support for many HTML5 & CSS3 features. If the browser does not support the canvas API, the Modernizr.canvas property will be false.
+	<br>
+	<br>
+	if (Modernizr.canvas) {<br>
+  // Your browser supports Html5<br>
+}<br> else {<br>
+  // Your browser doesn't support html5<br>
+}
+</p>
+<h1>Difference between Object and Embed tag</h1>
+<p>The Object and Embed tags are allowed in HTML5 to load external "plugin" content, but they are very similar in functionality.
+The &lt;object&gt; tag is mainly for Internet Explorer, while the &lt;embed&gt; tag is for Netscape and related to it browsers using Netscape plugin to display a flash movie.
+The &lt;embed&gt; tag defines a container for an external application or interactive content (a plug-in).
+The &lt;object&gt; tag defines an embedded object within an HTML document. Use this element to embed multimedia (like audio, video, Java applets, ActiveX, PDF, and Flash) in your web pages.
+
+You can also use the &lt;object&gt; tag to embed another webpage into your HTML document</p>
+</html>
