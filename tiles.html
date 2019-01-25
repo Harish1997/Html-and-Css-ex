@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.container{
+			width: 30%;
+			height:100vh;
+			border: 4px solid black;
+		}
+		.largebox{
+			display: inline-block;
+			width: 65%;
+			height: 95%;
+			border: 3px solid black;
+		}
+		.mediumbox{
+			display: inline-block;
+			width: 32%;
+			height: 95%;
+			border: 3px solid black;
+		}
+		.rectbox{
+			width: 90%;
+			height: 95%;
+			border: 1px solid black;
+		}
+		.smallbox{
+			display: inline-block;
+			width: 48%;
+			height: 48%;
+			border: 1px solid black;
+		}
+		.minibox{
+			display: inline-block;
+			width: 47%;
+			height: 98%;
+			border: 1px solid black;
+		}
+		.microbox{
+			width: 43%;
+			height:50%;
+			border: 1px solid black; 
+		}
+		.row{
+			height: 20%;
+			width: 100%;
+			border: 1px solid black;
+		}
+		.one{
+			display: inline-block;
+		}
+		.two{
+			display: inline-block;
+		}
+		.three{
+			display: inline-block;
+		}
+		.four{
+			display: inline-block;
+		}
+		.five{
+			display: inline-block;
+			vertical-align: top;
+		}
+		.nextone{
+			display: inline-block;
+		}
+		.six{
+			display: inline-block;
+		}
+		.seven{
+			display: inline-block;
+		}
+		.eight{
+			display: inline-block;
+		}
+		.nine{
+			display: inline-block;
+		}
+		.nexttwo{
+			display: inline-block;
+			width: 31%;
+		}
+		.nextthree{
+			display: inline-block;
+		}
+
+		.ten{
+			display: inline-block;
+			height: 90%;
+			width: 48%;
+			vertical-align: top;
+		}
+		.eleven{
+			display: inline-block;
+			width: 100%;
+		}
+		.twelve{
+			width: 100%;
+			display: inline-block;
+		}
+		.thirteen{
+			display:inline-block;
+			width: 98%;
+			height: 98%;
+		}
+
+		.microholder{
+			display: inline-block;
+			width: 44%;
+			height: 90%;
+			border: 1px solid black;
+		}
+		.fourteen{
+			display: inline-block;
+			vertical-align: top;
+			width: 32%;
+		}
+		.nextthree{
+		}
+
+
+		.fifteen{
+		}
+
+		.first-wrap{
+			width: 98%;
+			height: 65%;
+			display: inline-block;
+
+		}
+		.row-wrap{
+			width: 100%;
+			height: 48%;
+			display: inline-block;
+
+		}
+		.bdr{
+			border: 3px solid green;
+			box-sizing: border-box;
+		}
+		.inlineblock{
+			height: 90%;
+			width: 90%;
+			display: inline-block;
+			border: 3px solid green;
+		}
+		.bdrnone{
+			border: 0;	
+		}
+		.second-wrap{
+			height: 30%;
+			width: 98%;
+			display: inline-block;
+		}
+		.adjust{
+			width: 31%;
+		}
+		.twentyone{
+			width: 33%;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="largebox one">1</div>
+		<div class="mediumbox two">2</div>
+	</div>
+	<div class="row">
+		<div class="mediumbox three">3</div>
+		<div class="largebox four">4</div>
+	</div>
+	<div class="row">
+		<div class="largebox five">5</div>
+		<div class="mediumbox three">
+			<div class="row-wrap">
+				<div class="minibox">6</div>
+				<div class="minibox">7</div>
+			</div>
+			<div class="row-wrap ">
+				<div class="minibox">8</div>
+				<div class="minibox">9</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="row">
+	<div class="mediumbox nexttwo">
+		<div class="first-wrap">
+	 			<div class="smallbox ten">10</div> 
+			<div class="microholder">
+				<div class="inlineblock">
+					<div class="microbox eleven">11</div>
+					<div class="microbox twelve">12</div>
+				</div>
+	 		</div>
+	 	</div>
+
+  		<div class="second-wrap">
+	 			<div class="rectbox thirteen">13</div> 
+		</div>
+	</div>
+	<div class="mediumbox fourteen">
+		14
+	</div>
+
+	<div class="mediumbox nexttwo">
+		<div class="first-wrap">
+	 			<div class="smallbox ten">10</div> 
+			<div class="microholder">
+				<div class="inlineblock">
+					<div class="microbox eleven">11</div>
+					<div class="microbox twelve">12</div>
+				</div>
+	 		</div>
+	 	</div>
+
+  		<div class="second-wrap">
+	 			<div class="rectbox thirteen">13</div> 
+		</div>
+	</div>
+
+</div>
+	<div class="row">
+		<div class="mediumbox nineteen adjust">19</div>
+		<div class="mediumbox twenty adjust">20</div>
+		<div class="mediumbox twentyone">21</div>
+	</div>
+</div>
+</body>
+</html>
